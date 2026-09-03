@@ -5,26 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Criptografía</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="recursos/icon.jpeg">
 </head>
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
     <div class="container">
         <!-- Perfil Principal -->
         <header class="profile-section">
-            <img src="recursos/fotoperfil.jpg" alt="Foto de Perfil" class="profile-pic">
-            <h1>Patricia Estefania Martinez Ortiz</h1>
-            <span class="badge">Ingeniería en Sistemas Computacionales</span>
-            <p><strong>Institución:</strong> ESCOM - Instituto Politécnico Nacional</p>
-            <p>📧 patriciamartinezo2200@alumno.ipn.mx | <a href="#">GitHub</a></p>
+            <!-- Botón de menú para móviles -->
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+
+            <!-- Navegación Superior -->
+            <nav class="top-nav">
+                <a href="#academica">TRAYECTORIA</a>
+                <a href="#hobbies">HOBBIES</a>
+                <a href="#cripto">CRIPTODATOS</a>
+                <a href="#llave">ENVÍAME UN MENSAJE :)</a>
+            </nav>
+
+            <!-- Texto gigante de fondo -->
+            <div class="massive-bg-text">ESTEFANIA MARTINEZ</div>
+            
+            <!-- Contenedor frontal -->
+            <div class="profile-content-grid">
+                <div class="bio-left">
+                    <p>Soy Patricia Estefania Martinez Ortiz, estudiante de ingeniería en sistemas computacionales.</p>
+                </div>
+
+                <div class="avatar-center">
+                    <img src="recursos/fotoperfil.jpg" alt="Foto de Estefania" class="profile-pic">
+                </div>
+
+                <div class="info-right">
+                    <p>Institución: ESCOM - IPN</p>
+                    <p class="email-text">patriciamartinezo2200@alumno.ipn.mx</p>
+                    <div class="social-links">
+                        <a href="http://www.linkedin.com/in/patricia-estefania" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/estefanimartinez17" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:patriciamartinezo2200@alumno.ipn.mx" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- Botones de Acción Rápida -->
         <nav class="action-buttons">
-            <a href="recursos/CV_Estefania_Martinez.pdf" download="CV_Estefania_Martinez.pdf" target="_blank" class="btn">📄 Descargar CV</a>
+            <a href="recursos/CV_Estefania_Martinez.pdf" target="_blank" download="CV_Estefania_Martinez.pdf" class="btn">📄 Descargar CV</a>
             <a href="#llave" class="btn">🔑 Mi llave Pública</a>
         </nav>
 
         <!-- Formación Académica -->
-        <section class="card">
+        <section class="card" id="academica">
             <h2>Formación Académica</h2>
             <div class="text-content">
                 <p><strong>Secundaria:</strong> María González Palma, Mérida, Yucatán.</p>
@@ -34,7 +67,7 @@
         </section>
 
         <!-- Hobbies y Pasatiempos -->
-        <section class="card">
+        <section class="card" id="hobbies">
             <h2> Hobbies e intereses</h2>
             
             <div class="hobby-item">
@@ -64,7 +97,7 @@
         </section>
 
         <!-- Datos Curiosos -->
-        <section class="card">
+        <section class="card" id="cripto">
             <h2> Acerca de criptografía clásica</h2>
             <div class="item-list">
                 <h3>1. El cifrado César</h3>
@@ -84,8 +117,31 @@
         <section id="llave" class="card glow-card">
             <h2>🔑 Contacto Seguro </h2>
             <p>Da click debajo para descargar mi llave pública.</p>
-            <a href="recursos/llave_publica.pem" download="llave_publica.pem" class="btn btn-primary">⬇ Descargar Llave Pública</a>
+            <a href="recursos/llave_publica.asc" target="_blank" download="llave_publica.asc" class="btn btn-primary">⬇ Descargar Llave Pública</a>
         </section>
+        
     </div>
+    <script>
+        // Animación del cursor neón
+        const dot = document.querySelector('.cursor-dot');
+        const glow = document.querySelector('.cursor-glow');
+
+        document.addEventListener('mousemove', (e) => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            glow.animate({
+                left: e.clientX + 'px',
+                top: e.clientY + 'px'
+            }, { duration: 800, fill: "forwards" });
+        });
+
+        // Despliegue del menú hamburguesa en móviles
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const topNav = document.querySelector('.top-nav');
+
+        menuBtn.addEventListener('click', () => {
+            topNav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
