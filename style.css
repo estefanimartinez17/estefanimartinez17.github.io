@@ -130,7 +130,7 @@ body {
     font-family: 'Arial Black', Impact, sans-serif; 
     font-weight: 900;
     color: #e0e0e0;
-    text-transform: uppercase;
+    text-transform: none;
     z-index: 0; 
     letter-spacing: -2px;
     line-height: 0.8;
