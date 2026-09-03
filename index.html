@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Criptografía</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Perfil Principal -->
+        <header class="profile-section">
+            <img src="recursos/fotoperfil.jpg" alt="Foto de Perfil" class="profile-pic">
+            <h1>Patricia Estefania Martinez Ortiz</h1>
+            <span class="badge">Ingeniería en Sistemas Computacionales</span>
+            <p><strong>Institución:</strong> ESCOM - Instituto Politécnico Nacional</p>
+            <p>📧 patriciamartinezo2200@alumno.ipn.mx | <a href="#">GitHub</a></p>
+        </header>
+
+        <!-- Botones de Acción Rápida -->
+        <nav class="action-buttons">
+            <a href="recursos/CV_Estefania_Martinez.pdf" download="CV_Estefania_Martinez.pdf" class="btn">📄 Descargar CV</a>
+            <a href="#llave" class="btn">🔑 Mi llave Pública</a>
+        </nav>
+
+        <!-- Formación Académica -->
+        <section class="card">
+            <h2>Formación Académica</h2>
+            <div class="text-content">
+                <p><strong>Secundaria:</strong> María González Palma, Mérida, Yucatán.</p>
+                <p><strong>Medio Superior:</strong> Universidad del Valle de México, Mérida, Yucatán.</p>
+                <p><strong>Superior:</strong> ESCOM - IPN. En curso, CDMX. </p>
+            </div>
+        </section>
+
+        <!-- Hobbies y Pasatiempos -->
+        <section class="card">
+            <h2> Hobbies e intereses</h2>
+            
+            <div class="hobby-item">
+                <!-- Cambia 'viaje_japon.jpg' por el nombre real de tu foto en la carpeta recursos -->
+                <img src="recursos/foto_acuario.jpg" alt="Fotografía de viaje" class="hobby-img">
+                <div class="hobby-text">
+                    <h3>Viajes</h3>
+                    <p>Me encanta conocer nuevos lugares y culturas, además es muy divertido interactuar cuando existen diferencias de idioma; me ayuda a practicar mi inglés o interesarme a aprender uno nuevo.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <img src="recursos/dibujo.jpg" alt="Muestra de dibujo digital" class="hobby-img">
+                <div class="hobby-text">
+                    <h3>Dibujo y pintura</h3>
+                    <p>Paso parte de mi tiempo libre dibujando y pintando, ya que es una habilidad que se me da bien desde niña.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <img src="recursos/cine.jpg" alt="Cine y animación" class="hobby-img">
+                <div class="hobby-text">
+                    <h3>Cine</h3>
+                    <p>Me gusta hacer maratones, mi género favorito es el terror, aunque también soy un tanto aficionada a la animación, sobre todo asiática.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Datos Curiosos -->
+        <section class="card">
+            <h2> Acerca de criptografía clásica</h2>
+            <div class="item-list">
+                <h3>1. El cifrado César</h3>
+                <p>Este clásico método de sustitución es en realidad una simple suma modular: $C \equiv (P + K) \pmod{26}$. Su evolución matemática, el cifrado Vigenère, usó múltiples alfabetos y resistió ataques durante 300 años.</p>
+            </div>
+            <div class="item-list">
+                <h3>2. La Escítala Espartana</h3>
+                <p>El primer sistema criptográfico militar (siglo V a.C.) no alteraba las letras, solo su orden. En términos de programación, es el equivalente histórico a reordenar los índices de un arreglo en memoria sin alterar sus valores.</p>
+            </div>
+            <div class="item-list">
+                <h3>3. El disco de Jefferson</h3>
+                <p>Inventado en 1795, usaba 36 discos de madera giratorios. Fue el antepasado de la máquina Enigma y, conceptualmente, una de las primeras implementaciones mecánicas de las complejas máquinas de estado que hoy se diseñan en VHDL o Verilog.</p>
+            </div>
+        </section>
+
+        <!-- Descarga de Llave Pública -->
+        <section id="llave" class="card glow-card">
+            <h2>🔑 Contacto Seguro </h2>
+            <p>Da click debajo para descargar mi llave pública.</p>
+            <a href="recursos/llave_publica.pem" download="llave_publica.pem" class="btn btn-primary">⬇ Descargar Llave Pública</a>
+        </section>
+    </div>
+</body>
+</html>

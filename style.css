@@ -1,0 +1,171 @@
+/* Paleta de colores basada en Orchid */
+:root {
+    --bg-main: #140b1c; /* Morado muy oscuro casi negro */
+    --bg-card: #22122e; /* Morado oscuro para las tarjetas */
+    --orchid-light: #e6a8d7; /* Orquídea claro para textos */
+    --orchid-main: #da70d6; /* Orchid estándar para acentos */
+    --orchid-dark: #9932cc; /* Orquídea oscuro para botones */
+    --text-muted: #b8a5c2;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--orchid-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Perfil Principal */
+.profile-section {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.profile-pic {
+    width: 200px; /* Foto mucho más grande */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--orchid-main);
+    box-shadow: 0 0 25px rgba(218, 112, 214, 0.4); /* Brillo alrededor de la foto */
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--orchid-main);
+    border-bottom: 1px solid rgba(218, 112, 214, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.badge {
+    background-color: rgba(218, 112, 214, 0.2);
+    color: var(--orchid-light);
+    border: 1px solid var(--orchid-main);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Tarjetas (Cards) Creativas */
+.card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid rgba(218, 112, 214, 0.1);
+}
+
+.text-content {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Diseño de Hobbies con Imágenes Grandes */
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    background: rgba(218, 112, 214, 0.05);
+}
+
+.hobby-img {
+    width: 180px; /* Imágenes grandes para los hobbies */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.hobby-text {
+    flex: 1;
+}
+
+/* Listas simples */
+.item-list {
+    margin-bottom: 25px;
+}
+
+/* Botones */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: rgba(153, 50, 204, 0.2);
+    border: 1px solid var(--orchid-main);
+    color: var(--orchid-light);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--orchid-main);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(218, 112, 214, 0.5);
+}
+
+.btn-primary {
+    background-color: var(--orchid-dark);
+    color: white;
+    border: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Hacerlo responsivo para celulares */
+@media (max-width: 650px) {
+    .hobby-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hobby-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
